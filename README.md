@@ -3,18 +3,18 @@
 ### RPC server implementation to easily connect to KAPU blockchain Archealogical
 
 # Security Warning
-All calls should be made from the server where RPC is running at ( i.e., `localhost` or `127.0.0.1` ). The RPC server should never be publicly accessible. If you wish to access ark-rpc from a remote address, you can whitelist the address with `--allow <address>`. Addresses allow you to use wildcards, eg. `192.168.1.*` or `10.0.*.*`.
+All calls should be made from the server where RPC is running at ( i.e., `localhost` or `127.0.0.1` ). The RPC server should never be publicly accessible. If you wish to access kapu-rpc from a remote address, you can whitelist the address with `--allow <address>`. Addresses allow you to use wildcards, eg. `192.168.1.*` or `10.0.*.*`.
 
-If you do want to allow access from all remotes, start ark-rpc with the `--allow-remote` commandline switch. This can be dangerous.
+If you do want to allow access from all remotes, start kapu-rpc with the `--allow-remote` commandline switch. This can be dangerous.
 
 # How To Use It
 - install Node.JS ( https://nodejs.org/en/download/package-manager/)
 - install forever `npm install -g forever`
-- install ark-rpc: `npm install arkecosystem/ark-rpc#master`
-- start RPC server: `ark-rpc --port 8000` (default port is 8080)
+- install kapu-rpc: `npm install kapucoin/kapu-rpc#master`
+- start RPC server: `kapu-rpc --port 8000` (default port is 8080)
 
 # API
-Supported networks are `mainnet` and `devnet` all calls should start with the network you want to address, for instance,  `/mainnet/account/AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv` we call it `:network` in the API description.
+Supported networks are `mainnet` and `devnet` all calls should start with the network you want to address, for instance,  `/mainnet/account/KFt7DBJ7ZhCYAs9oUSPKozAq4g83CeTvd2` we call it `:network` in the API description.
 
 ## Accounts
 - Get account balance from `address`: `GET /:network/account/:address`

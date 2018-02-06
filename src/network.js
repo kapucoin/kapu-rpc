@@ -1,6 +1,6 @@
 var request = require('request');
 var async = require('async');
-var arkjs = require('arkjs');
+var kapujs = require('kapujs');
 
 var network = null,
   server = null;
@@ -8,34 +8,31 @@ var network = null,
 var networks = {
   devnet: {
     name: "devnet",
-    nethash: "578e820911f24e039733b45e4882b73e301f813a0d2c31330dafda84534ffa23",
+    nethash: "167130d695be9f945878237b84e3683c50ced3bbce4e4bf850ef6f9de166535e",
     slip44: 1,
-    version: 30,
+    version: 0x17,
     peers: [
-      "167.114.29.52:4002",
-      "167.114.29.53:4002",
-      "167.114.29.54:4002",
-      "167.114.29.55:4002"
+      "51.15.59.104:4001"
     ]
   },
   mainnet: {
     name: "mainnet",
     slip44: 111,
-    nethash: "6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988",
-    version: 23,
+    nethash: "313ea34c8eb705f79e7bc298b788417ff3f7116c9596f5c9875e769ee2f4ede1",
+    version: 0x2D,
     peers: [
-      "5.39.9.240:4001",
-      "5.39.9.241:4001",
-      "5.39.9.242:4001",
-      "5.39.9.243:4001",
-      "5.39.9.244:4001",
-      "5.39.9.250:4001",
-      "5.39.9.251:4001",
-      "5.39.9.252:4001",
-      "5.39.9.253:4001",
-      "5.39.9.254:4001",
-      "5.39.9.255:4001",
-      "193.70.72.90:4001"
+      "51.15.198.173:4600",
+      "51.15.215.113:4600",
+      "51.15.221.100:4600",
+      "51.15.194.207:4600",
+      "94.176.238.173:4600",
+      "185.5.55.249:4600",
+      "94.176.233.213:4600",
+      "94.176.236.51:4600",
+      "94.176.233.210:4600",
+      "51.15.89.225:4600",
+      "51.15.201.56:4600",
+      "51.15.84.234:4600"
     ]
   }
 };
@@ -152,7 +149,7 @@ function connect2network(netw, callback) {
 function connect(req, res, next) {
   if (!server || !network || network.name != req.params.network) {
     if (networks[req.params.network]) {
-      arkjs.crypto.setNetworkVersion(networks[req.params.network].version);
+      kapujs.crypto.setNetworkVersion(networks[req.params.network].version);
       connect2network(networks[req.params.network], next);
     } else {
       res.send({
