@@ -1,4 +1,4 @@
-![KAPU-RPC](https://i.imgur.com/Qhri07h.png)
+![KAPU-RPC](https://github.com/kapucoin/kapu-rpc/blob/master/BANNER_RPC.jpg)
 
 ### RPC server implementation to easily connect to KAPU blockchain Archealogical
 
