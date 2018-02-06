@@ -1,6 +1,6 @@
 ![ARK-RPC](https://cdn-images-1.medium.com/max/2000/1*QFNTgOOP_9NIaNwIrBnp_w.png)
 
-### RPC server implementation to easily connect to ARK blockchain
+### RPC server implementation to easily connect to KAPU blockchain Archealogical
 
 # Security Warning
 All calls should be made from the server where RPC is running at ( i.e., `localhost` or `127.0.0.1` ). The RPC server should never be publicly accessible. If you wish to access ark-rpc from a remote address, you can whitelist the address with `--allow <address>`. Addresses allow you to use wildcards, eg. `192.168.1.*` or `10.0.*.*`.
