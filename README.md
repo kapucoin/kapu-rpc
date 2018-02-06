@@ -1,4 +1,4 @@
-![ARK-RPC](https://cdn-images-1.medium.com/max/2000/1*QFNTgOOP_9NIaNwIrBnp_w.png)
+![KAPU-RPC](https://i.imgur.com/iklG18M.png)
 
 ### RPC server implementation to easily connect to KAPU blockchain Archealogical
 
